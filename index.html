@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sania Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Sania Gallery</h1>
+        <p>Beautiful moments, captured forever</p>
+    </header>
+
+    <div class="filters">
+        <button class="active" onclick="filterImages('all', this)">All</button>
+        <button onclick="filterImages('nature', this)">Nature</button>
+        <button onclick="filterImages('flowers', this)">Flowers</button>
+        <button onclick="filterImages('animals', this)">Animals</button>
+    </div>
+
+    <div class="gallery">
+
+        <!-- First Nature Picture -->
+        <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800"
+             class="nature" alt="Sunrise Nature" onclick="openImage(this)">
+
+        <!-- Flowers -->
+        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800"
+             class="flowers" alt="Beautiful Flowers" onclick="openImage(this)">
+
+        <!-- Lion -->
+        <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800"
+             class="animals" alt="Lion" onclick="openImage(this)">
+
+        <!-- Second Nature Picture: Green Forest -->
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=800"
+             class="nature" alt="Beautiful Green Forest" onclick="openImage(this)">
+
+        <!-- Flowers -->
+        <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=800"
+             class="flowers" alt="Flower Garden" onclick="openImage(this)">
+
+        <!-- Horse -->
+        <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800"
+             class="animals" alt="Horse" onclick="openImage(this)">
+
+    </div>
+
+    <div id="viewer" class="viewer">
+        <button class="close" onclick="closeImage()">×</button>
+
+        <button class="nav" onclick="changeImage(-1)">❮ Previous</button>
+
+        <div class="image-container">
+            <img id="largeImage" src="" alt="Large photo">
+            <p id="imageCount"></p>
+        </div>
+
+        <button class="nav" onclick="changeImage(1)">Next ❯</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
